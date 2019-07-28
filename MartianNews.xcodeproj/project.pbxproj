@@ -13,6 +13,12 @@
 		C2014A04217E9B15009E27E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2014A03217E9B15009E27E5 /* Assets.xcassets */; };
 		C2014A07217E9B15009E27E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2014A05217E9B15009E27E5 /* LaunchScreen.storyboard */; };
 		C2014A12217E9B15009E27E5 /* MartianNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A11217E9B15009E27E5 /* MartianNewsTests.swift */; };
+		C2014A1E217E9F9F009E27E5 /* ArticleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A1D217E9F9F009E27E5 /* ArticleModels.swift */; };
+		C2014A20217EA19A009E27E5 /* ArticleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A1F217EA19A009E27E5 /* ArticleAPI.swift */; };
+		C2014A23217EAC6B009E27E5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A22217EAC6B009E27E5 /* ListViewController.swift */; };
+		C2014A26217EB11E009E27E5 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A25217EB11E009E27E5 /* ArticleTableViewCell.swift */; };
+		C2014A28217EB9A0009E27E5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A27217EB9A0009E27E5 /* ArticleViewController.swift */; };
+		C2014A2A21823024009E27E5 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2014A2921823024009E27E5 /* Translator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		C2014A0D217E9B15009E27E5 /* MartianNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2014A11217E9B15009E27E5 /* MartianNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianNewsTests.swift; sourceTree = "<group>"; };
 		C2014A13217E9B15009E27E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2014A1D217E9F9F009E27E5 /* ArticleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModels.swift; sourceTree = "<group>"; };
+		C2014A1F217EA19A009E27E5 /* ArticleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPI.swift; sourceTree = "<group>"; };
+		C2014A22217EAC6B009E27E5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C2014A25217EB11E009E27E5 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		C2014A27217EB9A0009E27E5 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		C2014A2921823024009E27E5 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				C20149FC217E9B13009E27E5 /* AppDelegate.swift */,
-				C20149FE217E9B13009E27E5 /* ViewController.swift */,
 				C2014A00217E9B13009E27E5 /* Main.storyboard */,
+				C2014A24217EB104009E27E5 /* Views */,
+				C2014A21217EAC52009E27E5 /* Controllers */,
+				C2014A1C217E9F8F009E27E5 /* Model */,
 				C2014A03217E9B15009E27E5 /* Assets.xcassets */,
 				C2014A05217E9B15009E27E5 /* LaunchScreen.storyboard */,
 				C2014A08217E9B15009E27E5 /* Info.plist */,
@@ -94,6 +108,34 @@
 				C2014A13217E9B15009E27E5 /* Info.plist */,
 			);
 			path = MartianNewsTests;
+			sourceTree = "<group>";
+		};
+		C2014A1C217E9F8F009E27E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2014A1D217E9F9F009E27E5 /* ArticleModels.swift */,
+				C2014A1F217EA19A009E27E5 /* ArticleAPI.swift */,
+				C2014A2921823024009E27E5 /* Translator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2014A21217EAC52009E27E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C20149FE217E9B13009E27E5 /* ViewController.swift */,
+				C2014A27217EB9A0009E27E5 /* ArticleViewController.swift */,
+				C2014A22217EAC6B009E27E5 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C2014A24217EB104009E27E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2014A25217EB11E009E27E5 /* ArticleTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20149FF217E9B13009E27E5 /* ViewController.swift in Sources */,
+				C2014A20217EA19A009E27E5 /* ArticleAPI.swift in Sources */,
+				C2014A28217EB9A0009E27E5 /* ArticleViewController.swift in Sources */,
+				C2014A1E217E9F9F009E27E5 /* ArticleModels.swift in Sources */,
+				C2014A23217EAC6B009E27E5 /* ListViewController.swift in Sources */,
+				C2014A2A21823024009E27E5 /* Translator.swift in Sources */,
+				C2014A26217EB11E009E27E5 /* ArticleTableViewCell.swift in Sources */,
 				C20149FD217E9B13009E27E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H87FN8Z3;
 				INFOPLIST_FILE = MartianNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H87FN8Z3;
 				INFOPLIST_FILE = MartianNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +446,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H87FN8Z3;
 				INFOPLIST_FILE = MartianNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +467,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H87FN8Z3;
 				INFOPLIST_FILE = MartianNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

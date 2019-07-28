@@ -10,25 +10,49 @@ import XCTest
 @testable import MartianNews
 
 class MartianNewsTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    //  Downloads and parsed Articles plist from NY Times endpoint
+    //
+    func testArticleDownloadAndParsing() {
+        
+        let expectation = XCTestExpectation(description: "Download NY Times Articles")
+        
+        API.get { articles in
+            
+            XCTAssertNotNil(articles, "Articles were nil.")
+            
+            assert((articles as Any) is [Article], "Articles are downloaded and parsed.")
+            
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 10.0)
     }
 
+    func testMartianStringConversionFullExample() {
+        
+        let expectedResult = "boinga boinga boinga boinga boinga"
+        
+        let title = Translator.toMartian(from: "every word should need conversion")
+        
+        XCTAssertEqual(title, expectedResult, "String conversion method failed to convert")
+    }
+    
+    func testMartianStringConversionPartialExample() {
+        
+        let expectedResult = "boinga 2 boinga boinga be boinga"
+        
+        let title = Translator.toMartian(from: "only 2 words shouldn't be converted")
+        
+        XCTAssertEqual(title, expectedResult, "String conversion method failed to convert")
+    }
+    
+    func testMartianStringConversionPunctuationExample() {
+        
+        let expectedResult = "boinga 1 `boinga` boinga boinga boinga"
+        
+        let title = Translator.toMartian(from: "only 1 `word` should keep punctuation")
+        
+        XCTAssertEqual(title, expectedResult, "String conversion method failed to convert")
+    }
 }
